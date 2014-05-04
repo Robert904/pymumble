@@ -21,7 +21,7 @@ $(OPUS)/.libs/libopus.a : $(OPUS)/Makefile
 	cd $(OPUS) && make
 
 $(OPUS)/Makefile : | $(OPUS)
-	cd $(OPUS) && ./configure --disable-shared --enable-static
+	cd $(OPUS) && ./configure --disable-shared --enable-static $(CONFIGURE_OPTS)
 
 $(OPUS) : $(OPUS).tar.gz
 	tar zxf $(OPUS).tar.gz

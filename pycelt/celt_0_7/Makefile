@@ -21,7 +21,7 @@ $(CELT)/libcelt/.libs/libcelt0.a : $(CELT)/Makefile
 	cd $(CELT) && make
 
 $(CELT)/Makefile : | $(CELT)
-	cd $(CELT) && ./configure --disable-shared --enable-static
+	cd $(CELT) && ./configure --disable-shared --enable-static $(CONFIGURE_OPTS)
 
 $(CELT) : $(CELT).tar.gz
 	tar zxf $(CELT).tar.gz

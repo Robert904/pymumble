@@ -7,12 +7,14 @@ Description
 -----------
 This library act as a mumble client, connecting to a murmur server, exchanging states and audio.
 It as been developped as a hobby project, for a specific purpose of implementing an automatic audio
-recorder, but it has grown beyond taht point.
+recorder, but it has grown beyond that point.
 There are probably a lot a space for improvements, and a lot of features are missing, but I hope
 the basic framework is solid and it should be relatively easy to add functionnalites
 
 I'm actually not a professionnal developper (not anymore anyway, and a Cobol implementation of Mumble would be a bit obsolete...),
-so probably I took some weird choices or bad designs...  but I though it could be usefull for someone else. 
+so probably I took some weird choices or bad designs...  but I though it could be usefull for someone else.
+
+For a client application example, you can check https://github.com/Robert904/mumblerecbot
 
 Status
 ------
@@ -31,7 +33,7 @@ Status
 - Audio targets (whisper, etc.) is not managed in outgoing audio, and has very basic support in incoming
 - ping statistics
 - Probably a lot of other small features
-- poolishing ?
+- polishing ?
 
 Architecture
 ------------
@@ -56,6 +58,7 @@ Cython is needed, at least 0.14, and you need a worinkg compiler environment (I 
 
 in the pyopus and pycelt directories, there is a basic Makefile that should compile the library and create the
 loadable compiled Python module at the correct place.  You have to edit these Makefiles to select your environment (Linux or Mingw)
+If your cython installation use PIC compiled libraries, you will also hav to uncomment the "CONFIGURE_OPTS = "--with-pic" line.  You'll know if you get compilation error like "relocation R_X86_64_32S against `.rodata' can not be used when making a shared object; recompile with -fPIC"...  no idea how to check that automatically...
 
 Issues
 ------
