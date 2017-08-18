@@ -1,6 +1,10 @@
 PYMUMBLE python library
 =======================
 
+Preamble
+--------
+This library was for me a pet project made public, and after 4 years it still serves my purpose in its current state,  I don't really support it anymore...
+It's great to see that several people forked it to make it better! So, if you want to go for a more recent/reactive/supported version, take a look at the fork list! It seems that https://github.com/azlux/pymumble is quite active at the time of this writing.
 
 
 Description
